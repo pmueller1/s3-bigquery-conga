@@ -14,8 +14,8 @@ There are a few key concepts you need to know about to get this snippet working.
 - How to push data from your EC2 instances (or wherever) into S3 using a tool like 's3cmd' or 'aws s3'.
 - How to use S3's object notification, and [how to prime it to tell Lambda](http://docs.aws.amazon.com/lambda/latest/dg/with-s3.html) about any new files arriving in an S3 bucket.  
 - How to use python's 'virtualenv' command, so that you can create a self-contained zip file, structured the right way to include all the imported modules (like Pandas!) that we use here.  A good overview can be found [here](http://www.perrygeo.com/running-python-with-compiled-code-on-aws-lambda.html).
-- How to deploy a Lambda function, and make sure it runs with a role suitable to read from your S3 bucket.
-- If you've used BigQuery before, you'll recognize that you need to change the attached to point to your correct <project_id, dataset_name, table_name and service_key>.  Obviously, your service key, in json format, gets packaged up in the root directory of your zip file.  You'll forgive me for not posting our own service account!
+- How to deploy a Lambda function, and make sure it runs with a role suitable to read from your S3 bucket. (Alternately, how to just insert your AWS credentials so boto can use them directly.)
+- If you've used BigQuery before, you'll recognize that you need to change the attached to point to your correct <project_id, dataset_name, table_name and service_key>.  Obviously, your service key, in json format, gets packaged up in the root directory of your zip file.  You'll forgive me for not posting our own!
 - Don't skimp on timeout or RAM when it comes Lambda.  It's dirt cheap, and you can always scale back later, once you're seeing successful completions in your Cloudwatch logs.
 - The essence of this whole project can be found in the 'stream-to-bq.py' file.  If you've used Lambda for Python before, you could probably just get started by adapting that file to your needs.  
 
