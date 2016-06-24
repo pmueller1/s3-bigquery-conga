@@ -5,7 +5,9 @@
 I'm putting this file out into the ether to help AWS customers experience Google's BigQuery.    
 You can think of this as a pipeline that looks like so:
 
-CSV_File_on_EC2 --> s3push --> S3 --> AWS LAMBDA --> BQ Streaming Inserts --> BQ_Tables_organized_by_day
+CSV_File_on_EC2 --> S3 --> ObjectNotification --> AWS LAMBDA --> BQ Streaming Inserts --> BQ_Tables_organized_by_day
+
+In other words, get your CSV files onto S3 (however you like) and have them show up in BigQuery moments later.
 
 There are a few key concepts you need to know about to get this snippet working.  You need to understand and setup:
 
