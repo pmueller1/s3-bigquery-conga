@@ -25,7 +25,9 @@ Since we're using Pandas here, you could also manipulate your dataframe however 
 
 I previously [wrote a post](http://www.atso.com/our-bq-trip1/) outlining why we went this route in the first place.  
 
-Comments welcome!
+Comments welcome! 
+
+Twitter: @pmueller
 
 
 Credits: Christopher Corus - ATS, Chris Brokes - ATS, Abhijit Chanda - Gamma, Felipe Hoffa - Google, Graham Polley - Shine 
